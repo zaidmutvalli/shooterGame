@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Diagnostics.Eventing.Reader;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.IO;
 using System.Linq;
 using System.Media;
@@ -18,7 +19,7 @@ namespace SurviveTillDawn
     {
         //player object instantiated from character class
         private Character player;
-        private int kills; int ammo = 5;  int powerTime = 320; int powerDrop = 600;
+        private int kills; int ammo = 7;  int powerTime = 320; int powerDrop = 600;
         private bool moveUp, moveDown, moveLeft, moveRight, gameEnded, droppedAmmo = false, droppedHealth = false, droppedPowerUp = false;
         private string direction;
         private Random range = new Random();
@@ -42,6 +43,7 @@ namespace SurviveTillDawn
         private int minCameraX = 0; int maxCameraX = 1000;
         private int minCameraY = 0; int maxCameraY = 900;
         private int[] wallCoords = new int[2];
+        private int healthTimer = 300; int ammoDrop = 300;
 
         private string getFilePath()
         {
@@ -240,10 +242,10 @@ namespace SurviveTillDawn
             {
                 Canvas.DrawImage(healthKit.getImage(), healthKit.getX() - cameraX, healthKit.getY() - cameraY, healthKit.getWidth(), healthKit.getHeight());
             }
-            Canvas.DrawImage(Image.FromFile("wall.png"), -35 - cameraX, 10 - cameraY, 100, 1350);
-            Canvas.DrawImage(Image.FromFile("wall.png"), 1750 - cameraX, 10 - cameraY, 100, 1350);
-            Canvas.DrawImage(Image.FromFile("wall.png"), -35 - cameraX, 1300 - cameraY, 1875, 80);
-            Canvas.DrawImage(Image.FromFile("wall.png"), -35 - cameraX, 20 - cameraY, 1875, 80);
+            Canvas.DrawImage(Image.FromFile("black.png"), -35 - cameraX, 10 - cameraY, 100, 1350);
+            Canvas.DrawImage(Image.FromFile("black.png"), 1750 - cameraX, 10 - cameraY, 100, 1350);
+            Canvas.DrawImage(Image.FromFile("black.png"), -35 - cameraX, 1300 - cameraY, 1875, 80);
+            Canvas.DrawImage(Image.FromFile("black.png"), -35 - cameraX, 20 - cameraY, 1875, 80);
 
             foreach (Wall barrier in walls)
             {
@@ -328,10 +330,6 @@ namespace SurviveTillDawn
             {
                 dropAmmo();
             }
-            if (player.getHealth() < 50 && droppedHealth == false)
-            {
-                dropHealth();
-            }
             if (powerDrop < 1 && droppedPowerUp == false)
             {
                 makePowerUp();
@@ -350,23 +348,38 @@ namespace SurviveTillDawn
                 }
 
             }
+            if (healthTimer < 1 && droppedHealth == false)
+            {
+                dropHealth();
+            }
+            else
+            {
+                healthTimer--;
+            }
+            if (ammoDrop < 1 && droppedAmmo == false)
+            {
+                dropAmmo();
+            }
+            else
+            {
+                ammoDrop--;
+            }
             bulletHitsWall();
+            if (player.getHealth() > 100)
+            {
+                player.setHealth(100);
+            }
             this.Invalidate();
         }
         private void SpawnZombie()
         {
             // random co-ordinates assigned to zombies within boundaries
-            bool valid = false;
             int X = range.Next(60, 1500); 
-            int Y = range.Next(50, 1000);
-            if (X != wallCoords[0] && Y != wallCoords[1])
-            {
-                valid = true;
-            }
-            if (zombies.Count < 3 && valid)
+            int Y = range.Next(110, 1000);
+            if (zombies.Count < 5)
             {
                 // if zombie count falls below 3, new zombies are spawned and added to list 
-                Zombie zombie = new Zombie(X, Y);
+                Zombie zombie = new Zombie(X, Y, 4);
                 zombies.Add(zombie);
             }
         }
@@ -374,8 +387,7 @@ namespace SurviveTillDawn
         {
             foreach (Zombie zombie in zombies)
             {
-               
-                
+                            
                     if (zombie.getX() < player.getX())
                     {
                         if(zombie.isMovementAllowed())
@@ -475,8 +487,8 @@ namespace SurviveTillDawn
         private void dropHealth()
         {
             // assigns random co-ordinates to health kit
-            int X = range.Next(10, this.ClientSize.Width - 75);
-            int Y = range.Next(50, this.ClientSize.Height - 75);
+            int X = range.Next(60, 1500);
+            int Y = range.Next(110, 1000);
             // instantiates health kit based on sprite class
             healthKit = new Sprite(X, Y, 50, 50, 0);
             // sets image
@@ -493,11 +505,13 @@ namespace SurviveTillDawn
                 healthKit.getY(), healthKit.getWidth(), healthKit.getHeight()))
             {
                 // increases player health
-                int health = player.getHealth() + 10;
+                int health = player.getHealth() + 40;
                 player.setHealth(health);
                 // deletes healthkit image and makes bool false
                 healthKit.setImage(null);
                 droppedHealth = false;
+                //resets health timer
+                healthTimer = 300;
 
             }
         }
@@ -509,10 +523,11 @@ namespace SurviveTillDawn
                 player.getHeight(), ammoCrate.getX(), ammoCrate.getY(), 
                 ammoCrate.getWidth(), ammoCrate.getHeight()))
             {
-                ammo += 5;
+                ammo += 7;
                 ammoCrate.setImage(null);
                 droppedAmmo = false;
-
+                //resets ammo timer
+                ammoDrop = 300;
             }
         }
         private void shoot()
@@ -527,18 +542,19 @@ namespace SurviveTillDawn
         private void dropAmmo()
         {
             // random co-ordinates assigned to ammo crate
-            int X = range.Next(10, this.ClientSize.Width - 75);
-            int Y = range.Next(50, this.ClientSize.Height - 75);
+            int X = range.Next(60, 1500);
+            int Y = range.Next(110, 1000);
             // ammo crate instantiated based on sprite class
             ammoCrate = new Sprite(X, Y, 50, 100, 0);
             ammoCrate.setImage("ammoCrate.png");
             droppedAmmo = true;
+           
         }
         private void makePowerUp()
         {
             int i = range.Next(0, powerUpLocations.Count());
-            int X = range.Next(200, 1200);
-            int Y = range.Next(50, 500 );
+            int X = range.Next(60, 1500);
+            int Y = range.Next(110, 1000);
             powerUp = new Sprite(X, Y, 50, 100, 0);
             powerUp.setImage(powerUpLocations[i]);
             powerName = powerUpNames[i];
@@ -614,10 +630,6 @@ namespace SurviveTillDawn
                     }
                 }
             }
-            //if (cameraX + 500 >= maxX && direction == "right")
-            //{
-            //    cameraRestrict = true;
-            //}
         }
 
         private void bulletHitsWall()
@@ -677,6 +689,8 @@ namespace SurviveTillDawn
                 }
             }
         }
+
+
         private void endGame()
         {
             player.setImage("grave.png");

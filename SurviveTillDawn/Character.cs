@@ -20,7 +20,7 @@ namespace SurviveTillDawn
 
 
         
-        public Character(): base(580, 350, 75, 75, 15)
+        public Character(): base(580, 350, 75, 75, 10)
         {
             //constructor based on player class
             // assigned original health, co-ordinates and image

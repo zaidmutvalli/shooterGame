@@ -13,12 +13,14 @@ namespace SurviveTillDawn
         private bool movementAllowed = true;
         private string zombieHorizontalDirection;
         private string zombieVerticalDirection;
-        public Zombie(int x, int y) : base(x, y, 75, 75, 4)
+
+        public Zombie(int x, int y, int speed) : base(x, y, 75, 75, speed)
         {
             // constructor obtains zombie images as a list
             // initial image set 
             zombieImages = Directory.GetFiles("zombie", "*.png").ToList();
             base.setImage(zombieImages[3]);
+
         }
 
         public void moveZombie(string direction)

@@ -60,19 +60,15 @@ namespace SurviveTillDawn
                 // method increases/decreases co-ordinates accordingly
                 case "left":
                     // if statements prevent character from moving off screen.
-                   // if (x > 0)
                     x -= speed;
                     break;
                 case "right": 
-                    //if (x + width < 1200)
                     x += speed;
                     break;
                 case "up":
-                  //  if(y + height> 0)
                     y -= speed;
                     break;
                 case "down":
-                   // if ( y + height < 750)
                     y += speed;
                     break;
             }
