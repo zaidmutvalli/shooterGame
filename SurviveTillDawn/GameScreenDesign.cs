@@ -44,6 +44,11 @@ namespace SurviveTillDawn
         private int minCameraY = 0; int maxCameraY = 900;
         private int[] wallCoords = new int[2];
         private int healthTimer = 300; int ammoDrop = 300;
+        private Sprite miniMap;
+        private int miniMapX;
+        private int miniMapY;
+
+
 
         private string getFilePath()
         {
@@ -207,6 +212,8 @@ namespace SurviveTillDawn
             player = new Character();
             powerUpLocations = Directory.GetFiles("powerups", "*png").ToList();
             makeWall(getFilePath());
+            miniMap = new Sprite(miniMapX, miniMapY, 190, 190, 0);
+            miniMap.setImage("miniMap.png");
         }
 
         private void PaintEvent(object sender, PaintEventArgs e)
@@ -215,8 +222,8 @@ namespace SurviveTillDawn
             Graphics Canvas = e.Graphics;
 
             Canvas.DrawImage(Image.FromFile("grey.png"), -cameraX, -cameraY, 3000, 1700);
+            
             Canvas.DrawImage(player.getImage(), player.getX() - cameraX, player.getY() - cameraY, player.getWidth(), player.getHeight());
-
             // Draw zombies relative to the camera position
             foreach (Zombie zombie in zombies)
             {
@@ -246,16 +253,48 @@ namespace SurviveTillDawn
             Canvas.DrawImage(Image.FromFile("black.png"), 1750 - cameraX, 10 - cameraY, 100, 1350);
             Canvas.DrawImage(Image.FromFile("black.png"), -35 - cameraX, 1300 - cameraY, 1875, 80);
             Canvas.DrawImage(Image.FromFile("black.png"), -35 - cameraX, 20 - cameraY, 1875, 80);
+            
 
             foreach (Wall barrier in walls)
             {
                 Canvas.DrawImage(barrier.getImage(), barrier.getX() - cameraX, barrier.getY() - cameraY, barrier.getWidth(), barrier.getHeight());
             }
 
+            if (miniMap.getImage() != null)
+            { 
+                Canvas.DrawImage(miniMap.getImage(), miniMapX, miniMapY, 190, 190);
+                foreach (Wall barrier in walls)
+                {
+                    Canvas.DrawImage(barrier.getImage(), (barrier.getX() / 10) + miniMapX, (barrier.getY() / 6) + miniMapY, barrier.getWidth() / 10, barrier.getHeight() / 6);
+                }
+            }
+            
+           // Canvas.DrawImage(Image.FromFile("minimap.png"), miniMapX, miniMapY , 190, 190);
+           // foreach (Wall barrier in walls)
+         //   {
+          //     Canvas.DrawImage(barrier.getImage(), (barrier.getX()/ 10) + miniMapX, (barrier.getY()/ 6) + miniMapY, barrier.getWidth()/10, barrier.getHeight()/6);
+           // }
+
         }
 
         private void GameLoop(object sender, EventArgs e)
         {
+            
+        //    miniMap = new Sprite(miniMapX, miniMapY, 190, 190, 0);
+          //  miniMap.setImage("miniMap.png");
+         //   if (CollisionOccurred(player.getX(), player.getY(), player.getWidth(), player.getHeight(),
+       //         miniMap.getX(), miniMap.getY(), miniMap.getWidth(), miniMap.getHeight()))
+      //      {
+           //     miniMap.setImage(null);
+         //   }
+       // miniMap.setImage(null);
+            
+            if (player.getX() == 1600 || player.getY()== miniMapY)
+            {
+                miniMap.setImage(null);
+            }
+            miniMapX = this.ClientSize.Width - 170;
+            miniMapY = this.ClientSize.Height - 410;
             zombieCollidesWithWall();
             zombieDirection();
             // labels set to display kill and ammo count
@@ -530,6 +569,12 @@ namespace SurviveTillDawn
                 ammoDrop = 300;
             }
         }
+
+        private void pboMiniMap_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void shoot()
         {
             // bullet shot in same direction as player facing
@@ -689,7 +734,6 @@ namespace SurviveTillDawn
                 }
             }
         }
-
 
         private void endGame()
         {

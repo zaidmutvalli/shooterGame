@@ -101,3 +101,13 @@ N:\LatestV\SurviveTillDawn\obj\Debug\SurviveTillDawn.csproj.GenerateResource.cac
 N:\LatestV\SurviveTillDawn\obj\Debug\SurviveTillDawn.csproj.CoreCompileInputs.cache
 N:\LatestV\SurviveTillDawn\obj\Debug\SurviveTillDawn.exe
 N:\LatestV\SurviveTillDawn\obj\Debug\SurviveTillDawn.pdb
+N:\Coursework\SurviveTillDawn\bin\Debug\SurviveTillDawn.exe.config
+N:\Coursework\SurviveTillDawn\bin\Debug\SurviveTillDawn.exe
+N:\Coursework\SurviveTillDawn\bin\Debug\SurviveTillDawn.pdb
+N:\Coursework\SurviveTillDawn\obj\Debug\SurviveTillDawn.csproj.AssemblyReference.cache
+N:\Coursework\SurviveTillDawn\obj\Debug\SurviveTillDawn.GameScreenDesign.resources
+N:\Coursework\SurviveTillDawn\obj\Debug\SurviveTillDawn.Properties.Resources.resources
+N:\Coursework\SurviveTillDawn\obj\Debug\SurviveTillDawn.csproj.GenerateResource.cache
+N:\Coursework\SurviveTillDawn\obj\Debug\SurviveTillDawn.csproj.CoreCompileInputs.cache
+N:\Coursework\SurviveTillDawn\obj\Debug\SurviveTillDawn.exe
+N:\Coursework\SurviveTillDawn\obj\Debug\SurviveTillDawn.pdb
