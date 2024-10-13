@@ -111,3 +111,13 @@ N:\Coursework\SurviveTillDawn\obj\Debug\SurviveTillDawn.csproj.GenerateResource.
 N:\Coursework\SurviveTillDawn\obj\Debug\SurviveTillDawn.csproj.CoreCompileInputs.cache
 N:\Coursework\SurviveTillDawn\obj\Debug\SurviveTillDawn.exe
 N:\Coursework\SurviveTillDawn\obj\Debug\SurviveTillDawn.pdb
+D:\ZaidPrograms\PrType2\SurviveTillDawn\bin\Debug\SurviveTillDawn.exe.config
+D:\ZaidPrograms\PrType2\SurviveTillDawn\bin\Debug\SurviveTillDawn.exe
+D:\ZaidPrograms\PrType2\SurviveTillDawn\bin\Debug\SurviveTillDawn.pdb
+D:\ZaidPrograms\PrType2\SurviveTillDawn\obj\Debug\SurviveTillDawn.csproj.AssemblyReference.cache
+D:\ZaidPrograms\PrType2\SurviveTillDawn\obj\Debug\SurviveTillDawn.GameScreenDesign.resources
+D:\ZaidPrograms\PrType2\SurviveTillDawn\obj\Debug\SurviveTillDawn.Properties.Resources.resources
+D:\ZaidPrograms\PrType2\SurviveTillDawn\obj\Debug\SurviveTillDawn.csproj.GenerateResource.cache
+D:\ZaidPrograms\PrType2\SurviveTillDawn\obj\Debug\SurviveTillDawn.csproj.CoreCompileInputs.cache
+D:\ZaidPrograms\PrType2\SurviveTillDawn\obj\Debug\SurviveTillDawn.exe
+D:\ZaidPrograms\PrType2\SurviveTillDawn\obj\Debug\SurviveTillDawn.pdb
