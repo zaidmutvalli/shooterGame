@@ -219,10 +219,8 @@ namespace SurviveTillDawn
             miniMap = new Sprite(miniMapX, miniMapY, 190, 190, 0);
             miniMap.setImage("miniMap.png");
             arrow = new Sprite(arrowX, arrowY, 8, 8,0);
-
             arrowImages = Directory.GetFiles("arrowImages", "*png").ToArray();
             arrow.setImage(arrowImages[0]); 
-           // arrowImages = Directory.GetFiles("arrowImages", "*png").ToString();
         }
 
         private void PaintEvent(object sender, PaintEventArgs e)
@@ -279,26 +277,23 @@ namespace SurviveTillDawn
                 Canvas.DrawImage(arrow.getImage(), (player.getX()/10) + miniMapX, (player.getY()/6) + miniMapY, player.getWidth() / 8, player.getHeight() / 5);
                 foreach (Zombie opponent in zombies.ToList())
                 {
+                    
                     Canvas.DrawImage(Image.FromFile("red.png"), (opponent.getX() / 10) + miniMapX, (opponent.getY() / 6) + miniMapY, opponent.getWidth() / 10, opponent.getHeight() / 6);
                 }
-              //  foreach(Sprite power in powerUps.ToList())
-                //{
-               //     Canvas.DrawImage(power.getImage(), (power.getX() / 10) + miniMapX, (power.getY() / 6) + miniMapY, power.getWidth() / 10, power.getHeight() / 6);
-               // }
                if (droppedHealth)
                 {
-                    Canvas.DrawImage(healthKit.getImage(), (healthKit.getX() / 10) + miniMapX, (healthKit.getY() / 6) + miniMapY, healthKit.getWidth() / 10, healthKit.getHeight() / 6);
+                    Canvas.DrawImage(Image.FromFile("healthA.png"), (healthKit.getX() / 10) + miniMapX, (healthKit.getY() / 6) + miniMapY, healthKit.getWidth() / 4, healthKit.getHeight() / 4);
                 }
                 if (droppedAmmo)
                 {
-                    Canvas.DrawImage(ammoCrate.getImage(), (ammoCrate.getX() / 10) + miniMapX, (ammoCrate.getY() / 6) + miniMapY, ammoCrate.getWidth() / 10, ammoCrate.getHeight() / 6);
+                    Canvas.DrawImage(Image.FromFile("ammoA.png"), (ammoCrate.getX() / 10) + miniMapX, (ammoCrate.getY() / 6) + miniMapY, ammoCrate.getWidth() / 5, ammoCrate.getHeight() / 5);
                 }
                 if (droppedPowerUp)
                 {
-                    Canvas.DrawImage(powerUp.getImage(), (powerUp.getX() / 10) + miniMapX, (powerUp.getY() / 6) + miniMapY, powerUp.getWidth() / 10, powerUp.getHeight() / 6);
+                    Canvas.DrawImage(Image.FromFile("powerA.png"), (powerUp.getX() / 10) + miniMapX, (powerUp.getY() / 6) + miniMapY, powerUp.getWidth() / 3, powerUp.getHeight() / 5);
                 }
             }
-
+            // Canvas.DrawImage(Image.FromFile("red.png"), (opponent.getX() / 10) + miniMapX, (opponent.getY() / 6) + miniMapY, opponent.getWidth() / 10, opponent.getHeight() / 6);
             // Canvas.DrawImage(Image.FromFile("minimap.png"), miniMapX, miniMapY , 190, 190);
             // foreach (Wall barrier in walls)
             //   {
@@ -309,20 +304,12 @@ namespace SurviveTillDawn
 
         private void GameLoop(object sender, EventArgs e)
         {
-            //    miniMap = new Sprite(miniMapX, miniMapY, 190, 190, 0);
-            //  miniMap.setImage("miniMap.png");
-            //   if (CollisionOccurred(player.getX(), player.getY(), player.getWidth(), player.getHeight(),
-            //         miniMap.getX(), miniMap.getY(), miniMap.getWidth(), miniMap.getHeight()))
-            //      {
-            //     miniMap.setImage(null);
-            //   }
-            // miniMap.setImage(null);
-
-            if (player.getX() == 1600 || player.getY() == miniMapY)
+            
+            if (player.getX() == 1600)
             {
                 miniMap.setImage(null);
             }
-            //arrow.setImage(arrowImages[arrowIndex]);
+            arrow.setImage(arrowImages[arrowIndex]);
 
             switch (direction)
             {
