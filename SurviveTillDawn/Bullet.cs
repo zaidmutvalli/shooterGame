@@ -14,7 +14,7 @@ namespace SurviveTillDawn
         // bullet class based on sprite superclass
         private string direction;
         private Timer bulletTimer;
-        private int speed = 15;
+        private int speed = 40;
         private List<string> bulletImages = new List<string>();
 
         public Bullet(string facing, int left, int top) : base(left, top, 20, 20, 30)
@@ -24,23 +24,22 @@ namespace SurviveTillDawn
             // separate timer for bullet to ensure smooth bullet movement
             direction = facing;
             bulletTimer = new System.Windows.Forms.Timer();
-            bulletTimer.Interval = speed;
+            bulletTimer.Interval = 20;
             bulletTimer.Tick += new EventHandler(BulletTimerEvent);
             bulletTimer.Start();
             bulletImages = Directory.GetFiles("bullet", "*.png").ToList();
             base.setImage(bulletImages[3]);
+            
         }
-        //Canvas.DrawImage(Image.FromFile("wall.png"), -35 - cameraX, 10 - cameraY, 100, 1350);
-        //    Canvas.DrawImage(Image.FromFile("wall.png"), 1750 - cameraX, 10 - cameraY, 100, 1350);
-        //    Canvas.DrawImage(Image.FromFile("wall.png"), -35 - cameraX, 1300 - cameraY, 1875, 80);
-        //    Canvas.DrawImage(Image.FromFile("wall.png"), -35 - cameraX, 20 - cameraY, 1875, 80);
+        
         private void BulletTimerEvent(object sender, EventArgs e)
         {
+            base.setSpeed(speed);
             base.navigation(direction);
             if (base.getX() < 10 || base.getX() + base.getWidth() > 1750 || base.getY() < 50 || base.getY() + base.getHeight() > 1350)
             {
-                bulletTimer.Stop();
-                bulletTimer.Dispose();
+                bulletTimer.Stop(); //stops timer after bullet is removed
+                bulletTimer.Dispose(); //timer is disposed
                 bulletTimer = null;
                 base.setImage(null);
             }

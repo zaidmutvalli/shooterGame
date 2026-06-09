@@ -121,3 +121,75 @@ D:\ZaidPrograms\PrType2\SurviveTillDawn\obj\Debug\SurviveTillDawn.csproj.Generat
 D:\ZaidPrograms\PrType2\SurviveTillDawn\obj\Debug\SurviveTillDawn.csproj.CoreCompileInputs.cache
 D:\ZaidPrograms\PrType2\SurviveTillDawn\obj\Debug\SurviveTillDawn.exe
 D:\ZaidPrograms\PrType2\SurviveTillDawn\obj\Debug\SurviveTillDawn.pdb
+D:\ZaidPrograms\PrType2 - Copy\SurviveTillDawn\bin\Debug\SurviveTillDawn.exe.config
+D:\ZaidPrograms\PrType2 - Copy\SurviveTillDawn\bin\Debug\SurviveTillDawn.exe
+D:\ZaidPrograms\PrType2 - Copy\SurviveTillDawn\bin\Debug\SurviveTillDawn.pdb
+D:\ZaidPrograms\PrType2 - Copy\SurviveTillDawn\obj\Debug\SurviveTillDawn.csproj.AssemblyReference.cache
+D:\ZaidPrograms\PrType2 - Copy\SurviveTillDawn\obj\Debug\SurviveTillDawn.GameScreenDesign.resources
+D:\ZaidPrograms\PrType2 - Copy\SurviveTillDawn\obj\Debug\SurviveTillDawn.Properties.Resources.resources
+D:\ZaidPrograms\PrType2 - Copy\SurviveTillDawn\obj\Debug\SurviveTillDawn.csproj.GenerateResource.cache
+D:\ZaidPrograms\PrType2 - Copy\SurviveTillDawn\obj\Debug\SurviveTillDawn.csproj.CoreCompileInputs.cache
+D:\ZaidPrograms\PrType2 - Copy\SurviveTillDawn\obj\Debug\SurviveTillDawn.exe
+D:\ZaidPrograms\PrType2 - Copy\SurviveTillDawn\obj\Debug\SurviveTillDawn.pdb
+D:\ZaidPrograms\PrType2 - Copy\SurviveTillDawn\bin\Debug\Microsoft.Win32.Registry.dll
+D:\ZaidPrograms\PrType2 - Copy\SurviveTillDawn\bin\Debug\NAudio.Asio.dll
+D:\ZaidPrograms\PrType2 - Copy\SurviveTillDawn\bin\Debug\NAudio.Core.dll
+D:\ZaidPrograms\PrType2 - Copy\SurviveTillDawn\bin\Debug\NAudio.dll
+D:\ZaidPrograms\PrType2 - Copy\SurviveTillDawn\bin\Debug\NAudio.Midi.dll
+D:\ZaidPrograms\PrType2 - Copy\SurviveTillDawn\bin\Debug\NAudio.Wasapi.dll
+D:\ZaidPrograms\PrType2 - Copy\SurviveTillDawn\bin\Debug\NAudio.WinForms.dll
+D:\ZaidPrograms\PrType2 - Copy\SurviveTillDawn\bin\Debug\NAudio.WinMM.dll
+D:\ZaidPrograms\PrType2 - Copy\SurviveTillDawn\bin\Debug\System.Security.AccessControl.dll
+D:\ZaidPrograms\PrType2 - Copy\SurviveTillDawn\bin\Debug\System.Security.Principal.Windows.dll
+D:\ZaidPrograms\PrType2 - Copy\SurviveTillDawn\bin\Debug\Microsoft.Win32.Registry.xml
+D:\ZaidPrograms\PrType2 - Copy\SurviveTillDawn\bin\Debug\NAudio.xml
+D:\ZaidPrograms\PrType2 - Copy\SurviveTillDawn\bin\Debug\NAudio.Asio.xml
+D:\ZaidPrograms\PrType2 - Copy\SurviveTillDawn\bin\Debug\NAudio.Core.xml
+D:\ZaidPrograms\PrType2 - Copy\SurviveTillDawn\bin\Debug\NAudio.Midi.xml
+D:\ZaidPrograms\PrType2 - Copy\SurviveTillDawn\bin\Debug\NAudio.Wasapi.xml
+D:\ZaidPrograms\PrType2 - Copy\SurviveTillDawn\bin\Debug\NAudio.WinForms.xml
+D:\ZaidPrograms\PrType2 - Copy\SurviveTillDawn\bin\Debug\NAudio.WinMM.xml
+D:\ZaidPrograms\PrType2 - Copy\SurviveTillDawn\bin\Debug\System.Security.AccessControl.xml
+D:\ZaidPrograms\PrType2 - Copy\SurviveTillDawn\bin\Debug\System.Security.Principal.Windows.xml
+D:\ZaidPrograms\PrType2 - Copy\SurviveTillDawn\obj\Debug\SurviveT.BDFD8625.Up2Date
+D:\ZaidPrograms\PrType2 - Copy\SurviveTillDawn\obj\Debug\SurviveTillDawn.MainMenu.resources
+D:\ZaidPrograms\PrType2 - Copy\SurviveTillDawn\obj\Debug\SurviveTillDawn.LogIn.resources
+D:\ZaidPrograms\PrType2 - Copy\SurviveTillDawn\bin\Debug\System.Data.SQLite.dll
+D:\ZaidPrograms\PrType2 - Copy\SurviveTillDawn\bin\Debug\System.Data.SQLite.xml
+D:\ZaidPrograms\PrType2 - Copy\SurviveTillDawn\bin\Debug\Users.db
+D:\ZaidPrograms\PrType2 - Copy - Copy (2)\SurviveTillDawn\bin\Debug\Users.db
+D:\ZaidPrograms\PrType2 - Copy - Copy (2)\SurviveTillDawn\bin\Debug\SurviveTillDawn.exe.config
+D:\ZaidPrograms\PrType2 - Copy - Copy (2)\SurviveTillDawn\bin\Debug\SurviveTillDawn.exe
+D:\ZaidPrograms\PrType2 - Copy - Copy (2)\SurviveTillDawn\bin\Debug\SurviveTillDawn.pdb
+D:\ZaidPrograms\PrType2 - Copy - Copy (2)\SurviveTillDawn\bin\Debug\Microsoft.Win32.Registry.dll
+D:\ZaidPrograms\PrType2 - Copy - Copy (2)\SurviveTillDawn\bin\Debug\NAudio.Asio.dll
+D:\ZaidPrograms\PrType2 - Copy - Copy (2)\SurviveTillDawn\bin\Debug\NAudio.Core.dll
+D:\ZaidPrograms\PrType2 - Copy - Copy (2)\SurviveTillDawn\bin\Debug\NAudio.dll
+D:\ZaidPrograms\PrType2 - Copy - Copy (2)\SurviveTillDawn\bin\Debug\NAudio.Midi.dll
+D:\ZaidPrograms\PrType2 - Copy - Copy (2)\SurviveTillDawn\bin\Debug\NAudio.Wasapi.dll
+D:\ZaidPrograms\PrType2 - Copy - Copy (2)\SurviveTillDawn\bin\Debug\NAudio.WinForms.dll
+D:\ZaidPrograms\PrType2 - Copy - Copy (2)\SurviveTillDawn\bin\Debug\NAudio.WinMM.dll
+D:\ZaidPrograms\PrType2 - Copy - Copy (2)\SurviveTillDawn\bin\Debug\System.Data.SQLite.dll
+D:\ZaidPrograms\PrType2 - Copy - Copy (2)\SurviveTillDawn\bin\Debug\System.Security.AccessControl.dll
+D:\ZaidPrograms\PrType2 - Copy - Copy (2)\SurviveTillDawn\bin\Debug\System.Security.Principal.Windows.dll
+D:\ZaidPrograms\PrType2 - Copy - Copy (2)\SurviveTillDawn\bin\Debug\Microsoft.Win32.Registry.xml
+D:\ZaidPrograms\PrType2 - Copy - Copy (2)\SurviveTillDawn\bin\Debug\NAudio.xml
+D:\ZaidPrograms\PrType2 - Copy - Copy (2)\SurviveTillDawn\bin\Debug\NAudio.Asio.xml
+D:\ZaidPrograms\PrType2 - Copy - Copy (2)\SurviveTillDawn\bin\Debug\NAudio.Core.xml
+D:\ZaidPrograms\PrType2 - Copy - Copy (2)\SurviveTillDawn\bin\Debug\NAudio.Midi.xml
+D:\ZaidPrograms\PrType2 - Copy - Copy (2)\SurviveTillDawn\bin\Debug\NAudio.Wasapi.xml
+D:\ZaidPrograms\PrType2 - Copy - Copy (2)\SurviveTillDawn\bin\Debug\NAudio.WinForms.xml
+D:\ZaidPrograms\PrType2 - Copy - Copy (2)\SurviveTillDawn\bin\Debug\NAudio.WinMM.xml
+D:\ZaidPrograms\PrType2 - Copy - Copy (2)\SurviveTillDawn\bin\Debug\System.Data.SQLite.xml
+D:\ZaidPrograms\PrType2 - Copy - Copy (2)\SurviveTillDawn\bin\Debug\System.Security.AccessControl.xml
+D:\ZaidPrograms\PrType2 - Copy - Copy (2)\SurviveTillDawn\bin\Debug\System.Security.Principal.Windows.xml
+D:\ZaidPrograms\PrType2 - Copy - Copy (2)\SurviveTillDawn\obj\Debug\SurviveTillDawn.csproj.AssemblyReference.cache
+D:\ZaidPrograms\PrType2 - Copy - Copy (2)\SurviveTillDawn\obj\Debug\SurviveTillDawn.GameScreenDesign.resources
+D:\ZaidPrograms\PrType2 - Copy - Copy (2)\SurviveTillDawn\obj\Debug\SurviveTillDawn.LogIn.resources
+D:\ZaidPrograms\PrType2 - Copy - Copy (2)\SurviveTillDawn\obj\Debug\SurviveTillDawn.MainMenu.resources
+D:\ZaidPrograms\PrType2 - Copy - Copy (2)\SurviveTillDawn\obj\Debug\SurviveTillDawn.Properties.Resources.resources
+D:\ZaidPrograms\PrType2 - Copy - Copy (2)\SurviveTillDawn\obj\Debug\SurviveTillDawn.csproj.GenerateResource.cache
+D:\ZaidPrograms\PrType2 - Copy - Copy (2)\SurviveTillDawn\obj\Debug\SurviveTillDawn.csproj.CoreCompileInputs.cache
+D:\ZaidPrograms\PrType2 - Copy - Copy (2)\SurviveTillDawn\obj\Debug\SurviveT.BDFD8625.Up2Date
+D:\ZaidPrograms\PrType2 - Copy - Copy (2)\SurviveTillDawn\obj\Debug\SurviveTillDawn.exe
+D:\ZaidPrograms\PrType2 - Copy - Copy (2)\SurviveTillDawn\obj\Debug\SurviveTillDawn.pdb

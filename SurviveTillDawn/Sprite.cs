@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
+using System.Media;
 using System.Runtime.Remoting.Channels;
 using System.Text;
 using System.Threading.Tasks;
@@ -39,6 +40,14 @@ namespace SurviveTillDawn
             {
                 this.image = null;
             }
+            //try
+            //{
+            //    this.image = Image.FromFile(visual);
+            //}
+            //catch(OutOfMemoryException) 
+            //{ 
+
+            //}
         }
 
         public Image getImage() { return this.image; }

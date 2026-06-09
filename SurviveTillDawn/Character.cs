@@ -17,7 +17,7 @@ namespace SurviveTillDawn
          private List<string> shooterImages = new List<string>();
         private List<string> InvincibleImages = new List<string>();
         private string currentPower;
-
+        private bool shooterImageNotFound = false; //boolean for image validation
 
         
         public Character(): base(580, 350, 75, 75, 10)
@@ -26,9 +26,27 @@ namespace SurviveTillDawn
             // assigned original health, co-ordinates and image
             health = 100;
             // obtained list of images from files
-            shooterImages = Directory.GetFiles("player", "*.png").ToList();
-            base.setImage(shooterImages[6]);
-            InvincibleImages = Directory.GetFiles("InvinciblePlayer", "*.png").ToList() ;
+            try
+            {//this try-catch aims to check if images have been correctly obtained
+                shooterImages = Directory.GetFiles("player", "*.png").ToList();
+                base.setImage(shooterImages[6]);
+            }
+            catch(DirectoryNotFoundException) 
+            { //catch in case the directory has not been founded containing the images
+                shooterImageNotFound=true;
+            }
+            catch(IndexOutOfRangeException) 
+            { //catch in case the index has been incorrectly set
+                shooterImageNotFound=true;
+            }
+            try
+            {//tries to access invincible images
+                InvincibleImages = Directory.GetFiles("InvinciblePlayer", "*.png").ToList();
+            }
+            catch(DirectoryNotFoundException)
+            {//if directory is not found
+                shooterImageNotFound=true;
+            }
         }
 
         public void face(string direction)
@@ -52,7 +70,11 @@ namespace SurviveTillDawn
             }
             navigation(direction);
         }
-
+        public bool imageNotFound()
+        {
+            //getter for the image not found bool
+            return this.shooterImageNotFound;
+        }
         public void zombieDamage() { this.health -= 1; }
         public int getHealth() { return this.health; }
         public void setHealth(int health) { this.health = health;}

@@ -16,7 +16,7 @@ namespace SurviveTillDawn
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new GameScreenDesign());
+            Application.Run(new MainMenu());
         }
     }
 }
